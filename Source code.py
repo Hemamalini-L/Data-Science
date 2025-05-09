@@ -195,8 +195,6 @@ with open('model/tfidf_vectorizer.pkl', 'wb') as vectorizer_file:
 
 print('Model and Vectorizer saved successfully in the model/ directory.')
 
-
-
 import requests
 
 # Sample news articles for testing
