@@ -1,0 +1,71 @@
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+
+Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 15000 entries, 0 to 14999
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   title   15000 non-null  object
+ 1   text    15000 non-null  object
+ 2   label   15000 non-null  object
+dtypes: object(3)
+memory usage: 351.7+ KB
+None
+
+Sample Data:
+                  title                                               text  \
+0  News Article Title 0  This is the content of the news article 0. It ...   
+1  News Article Title 1  This is the content of the news article 1. It ...   
+2  News Article Title 2  This is the content of the news article 2. It ...   
+3  News Article Title 3  This is the content of the news article 3. It ...   
+4  News Article Title 4  This is the content of the news article 4. It ...   
+
+  label  
+0  Fake  
+1  Real  
+2  Fake  
+3  Fake  
+4  Fake   
+
+Cleaned Data Sample:
+                                                text  \
+0  This is the content of the news article 0. It ...   
+1  This is the content of the news article 1. It ...   
+2  This is the content of the news article 2. It ...   
+3  This is the content of the news article 3. It ...   
+4  This is the content of the news article 4. It ...   
+
+                                        cleaned_text  
+0  content news article discusses various topic e...  
+1  content news article discusses various topic e...  
+2  content news article discusses various topic e...  
+3  content news article discusses various topic e...  
+4  content news article discusses various topic e...   
+Data Preprocessing Completed and Saved as cleaned_fake_news_dataset.csv
+
+Label Distribution:
+label
+Fake    7521
+Real    7479
+Name: count, dtype: int64
+
+<ipython-input-35-babbab5d63fb>:3: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x='label', data=data, palette='Set2')
+
+Text(0.5, 1.0, 'Fake News Word Cloud') 
+
+Feature Matrix Shape: (15000, 17)
+Feature Extraction Completed and Saved: tfidf_vectorizer.pkl, tfidf_features.pkl, labels.pkl 
+
+Model Training Completed and Best Model Saved as best_model.pkl
+
+ Model and Vectorizer saved successfully in the model/ directory.
+
+curl: (7) Failed to connect to 127.0.0.1 port 5000 after 0 ms: Connection refused
