@@ -21,7 +21,6 @@ print(data.info())
 print('\nSample Data:')
 print(data.head())
 
-from google.colab import drive
 drive.mount('/content/drive')
 # Remove missing values and duplicates
 data.dropna(inplace=True)
