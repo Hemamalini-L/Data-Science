@@ -7,6 +7,7 @@ import re
 # Download stopwords and wordnet
 nltk.download('stopwords')
 nltk.download('wordnet')
+nltk.download('punkt')
 
 # Initialize lemmatizer and stopwords
 lemmatizer = WordNetLemmatizer()
